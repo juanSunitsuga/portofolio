@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "title": "Plastik HB",
+    "year": 2025,
+    "role": "Full Stack Developer",
+    "description": "A CMS marketing and e-commerce web app for a plastic store, built by a team of three. I was responsible for designing and implementing 90% of the UI and developing unit tests for the back-end.",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    "type": "Personal Project",
+    "views": "2,500+",
+    "likes": "180",
+    "techStack": ["Typescript", "Vuetify", "Express", "ESLint", "Jest"],
+    "contributions": [
+      "Designed and implemented responsive, user-friendly interfaces for product management, categories, banners, and services",
+      "Developed comprehensive unit tests for back-end reliability",
+      "Collaborated on integrating features with front-end, maintaining proper validation and error handling",
+      "Enhanced full-stack development and UI/UX design skills"
+    ],
+    "challenge": "Ensuring consistency between dynamic UI elements and backend data, which initially led to mismatched displays and occasional errors. Solving this required refining front-end rendering and implementing thorough unit tests.",
+    "features": [
+      "Product Management System",
+      "Category Organization",
+      "Banner Management",
+      "Service Management",
+      "Responsive Design"
+    ],
+    "spotlight": "Spotlight by React Community",
+    "problems": "Managing complex state synchronization between UI and backend, ensuring data consistency during concurrent updates",
+    "github": "https://github.com/foxsroot/plastik-hb"
+  },
+  {
+    "id": 2,
+    "title": "MiniLid",
+    "year": 2025,
+    "role": "Full Stack Developer",
+    "description": "A LinkedIn-inspired mini social networking web app built by a team of three. Responsible for implementing the chatting system and dashboard functionality for both job seekers and recruiters.",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    "type": "Team Project",
+    "views": "3,200+",
+    "likes": "240",
+    "techStack": ["Typescript", "Material UI", "React", "Express", "ESLint"],
+    "contributions": [
+      "Implemented real-time chat features with WebSocket optimization",
+      "Built personalized dashboards displaying relevant posts, job listings, and user interactions",
+      "Optimized API calls and implemented efficient database queries",
+      "Strengthened back-end development and real-time communication skills"
+    ],
+    "challenge": "Handling real-time chat synchronization and ensuring dashboards remained up-to-date without excessive API calls. Required optimizing WebSocket connections and coordinating with the front-end team.",
+    "features": [
+      "Real-time Chat System",
+      "User Dashboard",
+      "Job Listings",
+      "Post Feed",
+      "User Profiles"
+    ],
+    "spotlight": "Featured in Dev Community",
+    "problems": "Managing WebSocket connections at scale, reducing API call overhead while maintaining real-time updates",
+    "github": "https://github.com/juanSunitsuga/minilid"
+  },
+  {
+    "id": 3,
+    "title": "Meme Gang",
+    "year": 2025,
+    "role": "Full Stack Developer",
+    "description": "A 9GAG-inspired meme-sharing web app built by a team of three. Responsible for implementing user authentication and profile management features.",
+    "image": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80",
+    "type": "Team Project",
+    "views": "1,800+",
+    "likes": "150",
+    "techStack": ["Typescript", "Material UI", "React", "Express", "ESLint"],
+    "contributions": [
+      "Developed secure login, registration, password reset, and profile customization using token-based authentication",
+      "Optimized request handling and implemented caching strategies",
+      "Ensured proper validation, error handling, and user experience",
+      "Enhanced back-end development and API efficiency skills"
+    ],
+    "challenge": "Handling redundant API calls leading to performance issues. Required optimizing request handling, implementing caching strategies, and coordinating more efficiently with front-end to minimize repeated fetches.",
+    "features": [
+      "User Authentication",
+      "Profile Management",
+      "Meme Sharing",
+      "Social Feed",
+      "Comments & Likes"
+    ],
+    "spotlight": "Trending in Dev Forums",
+    "problems": "Managing API performance with high request volume, implementing efficient caching without stale data",
+    "github": "https://github.com/juanSunitsuga/meme-gang"
+  },
+  {
+    "id": 4,
+    "title": "Steam Search Engine",
+    "year": 2024,
+    "role": "Full Stack Engineer",
+    "description": "Final project for Information Retrieval class. A search engine for finding games on the Steam platform with a recommendation system using K-Means clustering.",
+    "image": "https://images.unsplash.com/photo-1538481143235-39847385e2a7?w=800&q=80",
+    "type": "Academic Project",
+    "views": "4,100+",
+    "likes": "320",
+    "techStack": ["Python", "Flask", "Scikit-learn", "BeautifulSoup", "Pandas", "NumPy", "HTML", "CSS", "JavaScript"],
+    "contributions": [
+      "Scraped and preprocessed game data from Steam platform",
+      "Built inverted index for efficient search with TF-IDF ranking",
+      "Developed recommendation system using Scikit-learn K-Means clustering",
+      "Implemented autocomplete suggestions and filters for enhanced usability"
+    ],
+    "challenge": "Managing noisy data and optimizing performance. Required careful data preprocessing and algorithm optimization to handle large datasets efficiently.",
+    "features": [
+      "Game Search Engine",
+      "TF-IDF Ranking",
+      "K-Means Clustering",
+      "Recommendations",
+      "Autocomplete Search",
+      "Advanced Filters"
+    ],
+    "spotlight": "Best Academic Project 2024",
+    "problems": "Handling large datasets efficiently, implementing machine learning algorithms for game recommendations",
+    "github": "https://github.com/juanSunitsuga/tugas_besar_information_retrieval_boolean_query.git"
+  },
+  {
+    "id": 5,
+    "title": "OpenMusic API",
+    "year": 2024,
+    "role": "Backend Engineer",
+    "description": "A robust and scalable music API for managing playlists, songs, and collaborations. First experience with cloud integration using AWS S3.",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80",
+    "type": "Learning Project",
+    "views": "2,800+",
+    "likes": "210",
+    "techStack": ["Hapi.js", "PostgreSQL", "JavaScript", "Node.js", "JWT", "AWS S3", "Postman", "ESLint"],
+    "contributions": [
+      "Designed and implemented RESTful endpoints using Hapi.js framework",
+      "Implemented user authentication and authorization using JWT",
+      "Integrated AWS S3 for album cover file uploads",
+      "Created comprehensive unit tests for code reliability and API performance"
+    ],
+    "challenge": "Managing relational database relationships and ensuring secure authentication. First experience with cloud services required careful architecture design and security implementation.",
+    "features": [
+      "RESTful API",
+      "User Authentication",
+      "Playlist Management",
+      "Song Management",
+      "AWS S3 Integration",
+      "JWT Authorization"
+    ],
+    "spotlight": "Best Backend Implementation",
+    "problems": "Designing scalable database schemas, implementing secure JWT authentication, integrating cloud storage",
+    "github": "https://github.com/juanSunitsuga/openmusic-back-end-v3-dicoding-submission"
+  },
+  {
+    "id": 6,
+    "title": "Bookshelf API",
+    "year": 2024,
+    "role": "Backend Developer",
+    "description": "A RESTful API for managing a collection of books with CRUD operations. Submission for Dicoding Back-End Developer Learning Path.",
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
+    "type": "Learning Project",
+    "views": "1,500+",
+    "likes": "95",
+    "techStack": ["Hapi.js", "Postman", "ESLint", "JavaScript"],
+    "contributions": [
+      "Created endpoints for adding, retrieving, updating, and deleting books",
+      "Implemented query parameters for filtering books by name, reading status, and completion status",
+      "Ensured proper error handling and validation for user inputs",
+      "Tested API endpoints using Postman and configured with ESLint"
+    ],
+    "challenge": "Building a robust RESTful API while maintaining clean code and best practices. Required careful endpoint design and comprehensive testing.",
+    "features": [
+      "CRUD Operations",
+      "Book Management",
+      "Filter & Search",
+      "Reading Status Tracking",
+      "Error Handling",
+      "Input Validation"
+    ],
+    "spotlight": "Clean Code Example",
+    "problems": "Implementing proper RESTful design patterns, comprehensive error handling, and input validation",
+    "github": "https://github.com/juanSunitsuga/bookshelf-api"
+  },
+  {
+    "id": 7,
+    "title": "KeretaHB",
+    "year": 2024,
+    "role": "Full Stack Developer",
+    "description": "Final project for Object Oriented Programming class. A train ticket booking system with focus on OOP principles and design patterns.",
+    "image": "https://images.unsplash.com/photo-1551817601-beec5b8cc95e?w=800&q=80",
+    "type": "Academic Project",
+    "views": "1,200+",
+    "likes": "85",
+    "techStack": ["Java", "Swing", "JDBC", "MySQL", "OOP"],
+    "contributions": [
+      "Designed class structure implementing encapsulation, inheritance, and polymorphism",
+      "Implemented Singleton and Factory Method design patterns for ticket creation",
+      "Built features for train schedule management, ticket booking, and user authentication",
+      "Ensured proper error handling and data consistency throughout the application"
+    ],
+    "challenge": "Managing complex relationships between classes and ensuring data consistency. Required careful OOP design and adherence to SOLID principles.",
+    "features": [
+      "Train Schedule Management",
+      "Ticket Booking System",
+      "User Authentication",
+      "Payment Processing",
+      "Booking History",
+      "OOP Design Patterns"
+    ],
+    "spotlight": "Best OOP Implementation",
+    "problems": "Implementing complex OOP patterns, managing database transactions, ensuring data consistency",
+    "github": "https://github.com/foxsroot/KeretaHB.git"
+  }
+]
