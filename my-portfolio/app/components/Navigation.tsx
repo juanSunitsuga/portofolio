@@ -5,46 +5,27 @@ import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
   const pathname = usePathname();
-
-  const isActive = (path: string) => {
-    if (path === '/' && pathname === '/') return true;
-    if (path !== '/' && pathname.startsWith(path)) return true;
-    return false;
-  };
+  const sectionLinks = [
+    { label: 'Home', hash: 'home' },
+    { label: 'Projects', hash: 'projects' },
+    { label: 'Skills', hash: 'skills' },
+    { label: 'Experience', hash: 'experience' },
+    { label: 'Certifications', hash: 'certifications' },
+    { label: 'Education', hash: 'education' },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md border-b border-zinc-800">
-      <div className="max-w-3xl mx-auto px-16 py-4 flex gap-8">
-        <Link
-          href="/"
-          className={`text-sm font-medium transition-colors ${
-            isActive('/')
-              ? 'text-emerald-500'
-              : 'text-zinc-400 hover:text-white'
-          }`}
-        >
-          Home
-        </Link>
-        <Link
-          href="/projects"
-          className={`text-sm font-medium transition-colors ${
-            isActive('/projects')
-              ? 'text-emerald-500'
-              : 'text-zinc-400 hover:text-white'
-          }`}
-        >
-          Projects
-        </Link>
-        <Link
-          href="/about"
-          className={`text-sm font-medium transition-colors ${
-            isActive('/about')
-              ? 'text-emerald-500'
-              : 'text-zinc-400 hover:text-white'
-          }`}
-        >
-          About
-        </Link>
+      <div className="max-w-5xl mx-auto px-6 sm:px-10 py-4 flex gap-6 overflow-x-auto whitespace-nowrap scrollbar-thin">
+        {sectionLinks.map((item) => (
+          <Link
+            key={item.hash}
+            href={pathname === '/' ? `#${item.hash}` : `/#${item.hash}`}
+            className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
     </nav>
   );
