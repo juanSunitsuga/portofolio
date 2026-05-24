@@ -19,22 +19,256 @@
   }
 }
 
+html.lenis {
+  height: auto;
+}
+
+html.lenis body {
+  height: auto;
+}
+
 body {
   background-color: var(--background);
   background-image:
-    radial-gradient(circle at 12% 8%, rgba(16, 185, 129, 0.14), transparent 38%),
-    radial-gradient(circle at 88% 12%, rgba(59, 130, 246, 0.12), transparent 32%),
-    radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.08), transparent 40%);
+    radial-gradient(circle at 12% 8%, rgba(16, 185, 129, 0.15), transparent 40%),
+    radial-gradient(circle at 88% 12%, rgba(59, 130, 246, 0.1), transparent 35%),
+    radial-gradient(circle at 50% 100%, rgba(16, 185, 129, 0.08), transparent 50%);
   background-attachment: fixed;
+  background-size: 100% 100%;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 section[id],
 div[id] {
   scroll-margin-top: 96px;
+  scroll-behavior: smooth;
+}
+
+/* Hardware acceleration for smooth animations */
+.hardware-accelerated {
+  transform: translateZ(0);
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+}
+
+/* Enhanced smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+/* Custom scrollbar - modern and minimal */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 10px;
+  transition: background 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: rgba(16, 185, 129, 0.3) rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Utility animations */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth transitions */
+button, 
+a, 
+input,
+textarea,
+select {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Enhanced focus states */
+:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, 0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Text selection with gradient feel */
+::selection {
+  background-color: rgba(16, 185, 129, 0.4);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: rgba(16, 185, 129, 0.4);
+  color: #ffffff;
+}
+
+/* Framer motion optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Blur filter support */
+@supports (backdrop-filter: blur(1px)) {
+  .backdrop-blur {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Smooth image loading */
+img[loading="lazy"] {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimization for high-motion elements */
+.motion-safe {
+  @supports (animation: test) {
+    &:not(.reduce-motion *) {
+      will-change: transform, opacity;
+    }
+  }
+}
+
+/* Smooth scroll snap for carousel/scroll sections */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-mandatory > * {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
